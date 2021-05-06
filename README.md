@@ -23,6 +23,7 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'title' => 'API Documentation',
     'path' => [
         'name' => env('STOPLIGHT_PATH_NAME', 'docs'),
         'url' => env('STOPLIGHT_PATH_URL', 'api/docs'),
