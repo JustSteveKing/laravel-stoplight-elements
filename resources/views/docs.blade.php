@@ -6,7 +6,7 @@
     <title>{{ config('stoplight.title') }}</title>
     <!-- Embed elements Elements via Web Component -->
     <script src="https://unpkg.com/@stoplight/elements@beta/web-components.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/@stoplight/elements@beta/styles/elements.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@stoplight/elements@beta/styles/elements-core.min.css">
   </head>
   <body>
 
