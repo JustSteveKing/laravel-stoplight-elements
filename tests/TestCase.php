@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace JustSteveKing\Laravel\LaravelStoplight\Tests;
 
-use JustSteveKing\Laravel\LaravelStoplight\StoplightServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use JustSteveKing\Laravel\LaravelStoplight\StoplightServiceProvider;
 
 class TestCase extends Orchestra
 {
