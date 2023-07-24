@@ -23,6 +23,10 @@ class StoplightServiceProvider extends ServiceProvider
             ], 'views');
         }
 
+        if (! config('stoplight.enabled')) {
+            return;
+        }
+
         Route::group([
             'domain' => config('stoplight.path.domain'),
         ], function() {

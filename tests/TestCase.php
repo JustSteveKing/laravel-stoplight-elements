@@ -23,6 +23,7 @@ class TestCase extends Orchestra
 
     public function getEnvironmentSetUp($app)
     {
+        config()->set('stoplight.enabled', true);
         config()->set('stoplight.path.url', 'api/docs');
     }
 }

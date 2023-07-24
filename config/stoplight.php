@@ -1,6 +1,9 @@
 <?php
 
 return [
+
+    'enabled' => env('STOPLIGHT_ENABLED', true),
+
     /*
     |--------------------------------------------------------------------------
     | Page Title
