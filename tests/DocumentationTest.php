@@ -13,7 +13,7 @@ class DocumentationTest extends TestCase
      */
     public function it_responds_as_expected()
     {
-        $response = $this->get(config('stoplight.path.url'));
+        $response = $this->get(route(config('stoplight.path.name')));
 
         $response->assertStatus(200);
     }

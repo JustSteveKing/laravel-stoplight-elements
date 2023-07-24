@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace JustSteveKing\Laravel\LaravelStoplight;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class StoplightServiceProvider extends ServiceProvider
@@ -22,9 +23,17 @@ class StoplightServiceProvider extends ServiceProvider
             ], 'views');
         }
 
-        $this->loadRoutesFrom(
-            __DIR__ . '/../routes/stoplight.php'
-        );
+        if (! config('stoplight.enabled')) {
+            return;
+        }
+
+        Route::group([
+            'domain' => config('stoplight.path.domain'),
+        ], function() {
+            $this->loadRoutesFrom(
+                __DIR__ . '/../routes/stoplight.php'
+            );
+        });
 
         $this->loadViewsFrom(
             __DIR__ . '/../resources/views',

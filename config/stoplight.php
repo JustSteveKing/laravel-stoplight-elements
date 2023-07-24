@@ -1,6 +1,9 @@
 <?php
 
 return [
+
+    'enabled' => env('STOPLIGHT_ENABLED', true),
+
     /*
     |--------------------------------------------------------------------------
     | Page Title
@@ -20,6 +23,7 @@ return [
     |
     */
     'path' => [
+        'domain' => env('STOPLIGHT_PATH_DOMAIN'),
         'name' => env('STOPLIGHT_PATH_NAME', 'docs'),
         'url' => env('STOPLIGHT_PATH_URL', 'api/docs'),
     ],

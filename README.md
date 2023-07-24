@@ -28,8 +28,10 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'enabled' => env('STOPLIGHT_ENABLED', true),
     'title' => 'API Documentation',
     'path' => [
+        'domain' => env('STOPLIGHT_PATH_DOMAIN'),
         'name' => env('STOPLIGHT_PATH_NAME', 'docs'),
         'url' => env('STOPLIGHT_PATH_URL', 'api/docs'),
     ],
