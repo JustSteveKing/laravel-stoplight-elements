@@ -19,6 +19,8 @@ return [
     | Customise the name and url of where your API documentation will respond.
     |
     */
+    'domain' => env('STOPLIGHT_DOMAIN', null),
+
     'path' => [
         'name' => env('STOPLIGHT_PATH_NAME', 'docs'),
         'url' => env('STOPLIGHT_PATH_URL', 'api/docs'),
